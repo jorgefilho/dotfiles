@@ -1,0 +1,34 @@
+[user]
+	name = jorgefilho
+	email = papachristo@gmail.com
+
+[alias]
+	# View abbreviated SHA, description, and history graph of the latest 20 commits
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	cm = commit
+    co = checkout
+    st = status
+    a = add
+    b = branch
+    fu = fetch upstream
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+	
+[color]
+	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
