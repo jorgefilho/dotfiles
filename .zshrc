@@ -56,7 +56,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git grails pyton github gitignore git-flow)
+plugins=(git grails python github gitignore git-flow rails ruby)
 
 # User configuration
 
@@ -161,8 +161,12 @@ export MAVEN_HOME="/Users/jorge.filho/dev/tools/maven"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home"
 export JRE_HOME="$JAVA_HOME/jre"
 export MAN_PATH="$JAVA_HOME/man"
-#export RUBY_HOME="/home/jorge/dev/tools/ruby"
-#export MONGODB_HOME="/Users/jorge.filho/dev/tools/mongodb"
+export RUBY_HOME="/home/jorge/dev/tools/ruby"
+export MONGODB_HOME="/Users/jorge.filho/dev/tools/mongodb"
+export GRAILS_HOME="/Users/jorge.filho/.gvm/grails"
+export REDIS_HOME="/Users/jorge.filho/dev/tools/redis"
+
+
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
@@ -188,6 +192,10 @@ export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;33"
 export CLICOLOR="auto"
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:$JAVA_HOME/bin:$RUBY_HOME/bin:$MONGODB_HOME/bin
+PATH="$PATH:$HOME/.local/bin:$HOME/bin:$MAVEN_HOME/bin:$ANT_HOME/bin:$JAVA_HOME/bin:$RUBY_HOME/bin:$MONGODB_HOME/bin:$GRAILS_HOME/bin:$REDIS_HOME/src"
 
-export PATH
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/jorge.filho/.gvm/bin/gvm-init.sh" ]] && source "/Users/jorge.filho/.gvm/bin/gvm-init.sh"
